@@ -1,0 +1,39 @@
+[
+  {
+    "server": "appwin01",
+    "timestamp": "2026-03-14 09:01:12",
+    "reachable": true,
+    "domain_joined": true,
+    "domain_name": "CORP.NBFC.LOCAL",
+    "cpu_usage": 45,
+    "memory_usage": 60,
+    "status": "HEALTHY",
+    "issues": []
+  },
+  {
+    "server": "appwin02",
+    "timestamp": "2026-03-14 09:01:12",
+    "reachable": true,
+    "domain_joined": false,
+    "domain_name": "CORP.NBFC.LOCAL",
+    "cpu_usage": 92,
+    "memory_usage": 87,
+    "status": "CRITICAL",
+    "issues": [
+      "\ud83d\udea8 CRITICAL: Server dropped from AD domain",
+      "\u26a0\ufe0f  HIGH CPU: 92%",
+      "\u26a0\ufe0f  HIGH MEMORY: 87%"
+    ]
+  },
+  {
+    "server": "appwin03",
+    "timestamp": "2026-03-14 09:01:12",
+    "reachable": true,
+    "domain_joined": true,
+    "domain_name": "CORP.NBFC.LOCAL",
+    "cpu_usage": 30,
+    "memory_usage": 45,
+    "status": "HEALTHY",
+    "issues": []
+  }
+]

@@ -1,0 +1,115 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>NBFC Patch Health Report</title>
+        <style>
+            body { font-family: Arial, sans-serif; margin: 40px; background: #f5f5f5; }
+            .header { background: #2c3e50; color: white; padding: 20px;
+                       border-radius: 8px; margin-bottom: 20px; }
+            .summary { display: flex; gap: 20px; margin-bottom: 20px; }
+            .card { padding: 20px; border-radius: 8px; color: white;
+                     flex: 1; text-align: center; }
+            .card h2 { margin: 0; font-size: 2em; }
+            .card p { margin: 5px 0 0; }
+            .total { background: #2980b9; }
+            .healthy { background: #27ae60; }
+            .critical { background: #e74c3c; }
+            table { width: 100%; border-collapse: collapse;
+                     background: white; border-radius: 8px;
+                     overflow: hidden; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+            th { background: #2c3e50; color: white; padding: 12px; text-align: left; }
+            td { padding: 12px; border-bottom: 1px solid #eee; }
+            tr:hover { background: #f9f9f9; }
+            .footer { margin-top: 20px; color: #888; font-size: 0.85em; }
+        </style>
+    </head>
+    <body>
+        <div class="header">
+            <h1>🏦 NBFC Post-Patch Health Report</h1>
+            <p>Generated: 2026-03-14 14:40:15 | Domain: CORP.NBFC.LOCAL</p>
+        </div>
+
+        <div class="summary">
+            <div class="card total">
+                <h2>3</h2>
+                <p>Total Servers</p>
+            </div>
+            <div class="card healthy">
+                <h2>2</h2>
+                <p>Healthy</p>
+            </div>
+            <div class="card critical">
+                <h2>1</h2>
+                <p>Critical</p>
+            </div>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Server</th>
+                    <th>Checked At</th>
+                    <th>Reachable</th>
+                    <th>Domain Status</th>
+                    <th>CPU</th>
+                    <th>Memory</th>
+                    <th>Status</th>
+                    <th>Issues</th>
+                </tr>
+            </thead>
+            <tbody>
+                
+        <tr>
+            <td><strong>APPWIN01</strong></td>
+            <td>2026-03-14 09:01:12</td>
+            <td>✅ Yes</td>
+            <td>✅</td>
+            <td style="color:black">45%</td>
+            <td style="color:black">60%</td>
+            <td style="background:#2ecc71;color:white;
+                font-weight:bold;text-align:center">
+                HEALTHY
+            </td>
+            <td><span style='color:green'>None</span></td>
+        </tr>
+        
+        <tr>
+            <td><strong>APPWIN02</strong></td>
+            <td>2026-03-14 09:01:12</td>
+            <td>✅ Yes</td>
+            <td>🚨 DROPPED</td>
+            <td style="color:red">92%</td>
+            <td style="color:red">87%</td>
+            <td style="background:#e74c3c;color:white;
+                font-weight:bold;text-align:center">
+                CRITICAL
+            </td>
+            <td><ul><li>🚨 CRITICAL: Server dropped from AD domain</li><li>⚠️  HIGH CPU: 92%</li><li>⚠️  HIGH MEMORY: 87%</li></ul></td>
+        </tr>
+        
+        <tr>
+            <td><strong>APPWIN03</strong></td>
+            <td>2026-03-14 09:01:12</td>
+            <td>✅ Yes</td>
+            <td>✅</td>
+            <td style="color:black">30%</td>
+            <td style="color:black">45%</td>
+            <td style="background:#2ecc71;color:white;
+                font-weight:bold;text-align:center">
+                HEALTHY
+            </td>
+            <td><span style='color:green'>None</span></td>
+        </tr>
+        
+            </tbody>
+        </table>
+
+        <div class="footer">
+            <p>⚠️ This report is auto-generated post patch cycle.
+               Please review critical servers immediately.</p>
+            <p>🔒 Confidential — For internal use only | RBI Audit Reference</p>
+        </div>
+    </body>
+    </html>
+    

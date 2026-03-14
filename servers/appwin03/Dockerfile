@@ -1,0 +1,17 @@
+FROM python:3.11-slim
+
+# Healthy server
+ENV SERVER_NAME=APPWIN03
+ENV DOMAIN_JOINED=true
+ENV DOMAIN_NAME=CORP.NBFC.LOCAL
+ENV CPU_USAGE=30
+ENV MEMORY_USAGE=45
+ENV APP_PORT=8080
+
+RUN pip install flask
+
+WORKDIR /app
+
+COPY server.py .
+
+CMD ["python", "server.py"]

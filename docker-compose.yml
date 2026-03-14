@@ -1,0 +1,44 @@
+services:
+  # Simulated Windows Servers
+  appwin01:
+    build: ./servers/appwin01
+    container_name: APPWIN01
+    networks:
+      - nbfc-network
+    ports:
+      - "8081:80"
+
+  appwin02:
+    build: ./servers/appwin02
+    container_name: APPWIN02
+    networks:
+      - nbfc-network
+    ports:
+      - "8082:80"
+
+  appwin03:
+    build: ./servers/appwin03
+    container_name: APPWIN03
+    networks:
+      - nbfc-network
+    ports:
+      - "8083:80"
+
+  # Health Checker — our main tool
+  health-checker:
+    build: ./health-checker
+    container_name: health-checker
+    networks:
+      - nbfc-network
+    volumes:
+      - ./reports:/app/reports
+    depends_on:
+      - appwin01
+      - appwin02
+      - appwin03
+    environment:
+      - SERVERS=appwin01,appwin02,appwin03
+
+networks:
+  nbfc-network:
+    driver: bridge
